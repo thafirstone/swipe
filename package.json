@@ -1,0 +1,17 @@
+{
+  "name": "swipe",
+  "version": "0.0.0",
+  "description": "Hello Expo!",
+  "author": "thafirstone",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "dependencies": {
+    "expo": "^19.0.0",
+    "react": "16.0.0-alpha.12",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-19.0.0.tar.gz"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-equimper": "^2.2.1"
+  }
+}
