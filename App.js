@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { Card } from 'react-native-elements';
+import { Card, Button, Header } from 'react-native-elements';
 import Deck from './src/Deck';
 
 const DATA = [
@@ -17,13 +17,27 @@ const DATA = [
 export default class App extends React.Component {
   renderCard(item) {
     return (
-      <Text key={item.id}>{item.text}</Text>
+      <Card
+        key={item.id}
+        title={item.text}
+        image={{ uri: item.uri }}
+      >
+        <Text style={{ marginBottom: 10 }}>
+          Customize data ...
+        </Text>
+        <Button
+          icon={{ name: 'code' }}
+          backgroundColor="#03A9F4"
+          title="Voir"
+        />
+      </Card>
     );
   }
 
   render() {
     return (
       <View style={styles.container}>
+
         <Deck
           data={DATA}
           renderCard={this.renderCard}
@@ -36,7 +50,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     // alignItems: 'center',
     // justifyContent: 'center',
   },
