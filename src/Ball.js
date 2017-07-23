@@ -4,9 +4,9 @@ import { View, StyleSheet, Animated } from 'react-native';
 export default class Ball extends Component {
   state = { }
   componentWillMount() {
-    this.position = new Animated.ValueXY(0, 0);
+    this.position = new Animated.ValueXY({ x: 0, y: 0 });
     Animated.spring(this.position, {
-      toValue: { x: 300, y: 500 },
+      toValue: { x: 300, y: 600 },
     }).start();
   }
   render() {
