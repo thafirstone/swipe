@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View, Animated, PanResponder } from 'react-native';
 
 export default class Deck extends Component {
@@ -21,3 +22,8 @@ export default class Deck extends Component {
     );
   }
 }
+
+Component.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object),
+  renderCard: PropTypes.func,
+};
